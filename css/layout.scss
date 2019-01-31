@@ -9,13 +9,14 @@ body {
 }
 #header_wrap {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   width:100%;
   border-top:2px solid $primaryColor;
   border-bottom:1px solid #f1f3f2;
   background:#ffffff;
   height:80px;
+  transition: all 0.3s ease-out;
   #i_header {
     position:relative;
     width:100%;
@@ -27,6 +28,7 @@ body {
       left: 10px;
       font-size:30px;
       font-weight:900;
+      color: $primaryColor;
     }
     > ul.onedepth {      
       position: absolute;
@@ -34,10 +36,15 @@ body {
       top: 25px;
       height:310px;
       z-index: 200;
+      transition: all 0.5s;
       > li {
         float:left;
         position: relative;
-        margin-left:60px;        
+        margin-left:60px; 
+        &:hover > a {
+          color:$secondaryColor;
+          border-bottom:2px solid $secondaryColor;
+        }       
         > a {
           display:block;
           height: 55px;          
@@ -51,7 +58,7 @@ body {
     overflow: hidden;   
     position: absolute;
     top: 40px;
-    width: 100px;    
+    width: 100px;        
     padding-top: 40px;
     z-index:20;
     .submn li {
@@ -60,7 +67,7 @@ body {
         font-size: 16px;        
         color:#666666;
         &:hover {
-          color:$primaryColor;
+          color:$secondaryColor;
         }
       }      
     }  
@@ -74,7 +81,10 @@ body {
     border-top: 1px solid #f1f2f3;
   }
 }
-
+#header_wrap.sticky {
+  border-top: none;
+  background: rgba(255,255,255,0.7)  
+}
 
 #svisual_wrap {
   width:100%;
@@ -101,8 +111,39 @@ body {
 }
 
 
+@include tab {
+  body {
+    background:#b3a197;
+  }
+  #header_wrap {
+    #i_header {
+      >ul.onedepth {
+        right:50px;
+      }
+    }
+  }
+}
+@include mob {
+  body {
+    background:#cccccc;
+  }
+  #header_wrap {
+    display:none;
+  }
+}
+@include mob-large {
+  body {
+    background:#01a6bc;
+  }
+}
+@include mob-mid {
+  body {
+    background:#e8e4d9;
+  }
+}
 @include mob-small {
   body {
     min-width:320px;
+    background:#cccccc;
   }
 }

@@ -4,13 +4,15 @@ body {
 
 #header_wrap {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   border-top: 2px solid #006583;
   border-bottom: 1px solid #f1f3f2;
   background: #ffffff;
   height: 80px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 #header_wrap #i_header {
@@ -26,6 +28,7 @@ body {
   left: 10px;
   font-size: 30px;
   font-weight: 900;
+  color: #006583;
 }
 
 #header_wrap #i_header > ul.onedepth {
@@ -34,12 +37,19 @@ body {
   top: 25px;
   height: 310px;
   z-index: 200;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #header_wrap #i_header > ul.onedepth > li {
   float: left;
   position: relative;
   margin-left: 60px;
+}
+
+#header_wrap #i_header > ul.onedepth > li:hover > a {
+  color: #01a6bc;
+  border-bottom: 2px solid #01a6bc;
 }
 
 #header_wrap #i_header > ul.onedepth > li > a {
@@ -68,7 +78,7 @@ body {
 }
 
 #header_wrap .sub_menu .submn li a:hover {
-  color: #006583;
+  color: #01a6bc;
 }
 
 #header_wrap .submenu_bg {
@@ -78,6 +88,11 @@ body {
   height: 250px;
   background: #ffffff;
   border-top: 1px solid #f1f2f3;
+}
+
+#header_wrap.sticky {
+  border-top: none;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 #svisual_wrap {
@@ -108,9 +123,40 @@ body {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1024px) {
+  body {
+    background: #b3a197;
+  }
+  #header_wrap #i_header > ul.onedepth {
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background: #cccccc;
+  }
+  #header_wrap {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    background: #01a6bc;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background: #e8e4d9;
+  }
+}
+
 @media screen and (max-width: 320px) {
   body {
     min-width: 320px;
+    background: #cccccc;
   }
 }
 /*# sourceMappingURL=layout.css.map */
