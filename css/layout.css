@@ -123,6 +123,10 @@ body {
   color: #ffffff;
 }
 
+#m_menu_panel {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   body {
     background: #b3a197;
@@ -136,8 +140,33 @@ body {
   body {
     background: #cccccc;
   }
-  #header_wrap {
+  .onedepth {
     display: none;
+  }
+  #m_menu_panel {
+    position: fixed;
+    left: 0px;
+    top: 0;
+    overflow-y: auto;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+  }
+  #m_menu_panel .m_menu_area {
+    position: relative;
+  }
+  #m_menu_panel .m_menu_area ul.submn > li {
+    height: 30px;
+    line-height: 30px;
+  }
+  #m_menu_bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
   }
 }
 
