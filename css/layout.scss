@@ -103,6 +103,7 @@ body {
     text-align:center;
     color:#ffffff;
     box-sizing:border-box;
+    transition: all 0.5s ease-out;
     h2 {
       margin-top:50px;
       margin-bottom:15px;
@@ -244,6 +245,15 @@ body {
     height:100vh;
     background:rgba(0,0,0,0.7);
     z-index:19;
+  }
+  #svisual_wrap {
+    #i_svisual {
+      height: 200px;
+      padding: 20px 0;
+      h2 {
+        margin-top: 30px;
+      }
+    }
   }
 }
 @include mob-large {
