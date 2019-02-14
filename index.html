@@ -10,7 +10,11 @@
 <script src="js/jquery-1.12.4.js"></script>
 <script src="js/prefixfree.min.js"></script>
 <script src="js/html5shiv.js"></script>
+<script src="js/simpleparallax.js"></script>
 <script src="js/index.js"></script>
+<style type="text/css">
+	.parallax { background-size:cover; background-size:cover; }
+</style>
 </head>
 <body>
 
@@ -95,7 +99,7 @@
  
  <div id="m_menu_bg"></div>
 
- <div id="svisual_wrap">
+ <div id="svisual_wrap" class="parallax" data-dir="up">
    <div id="i_svisual">
      <h2>Page Title</h2>
      <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend dictum consequat.</p>
@@ -104,6 +108,7 @@
  
  <div id="container"> 
  <div id="content">
+  
  </div>
  <!-- //content -->
  </div>
@@ -114,5 +119,11 @@
  <!-- //footer -->
 
  <a href="#top" id="btn_scrolltop"><i class="fa fa-arrow-circle-up"></i></a>
+
+<script>
+  $(function(){
+    $('.parallax').simpleParallax();
+  });
+</script>
 </body>
 </html>
