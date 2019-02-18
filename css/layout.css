@@ -225,6 +225,9 @@ body {
     font-size: 19px;
     font-family: fontawesome;
   }
+  #m_menu_panel .m_menu_area .onedepth > li:hover > a {
+    color: #006583;
+  }
   #m_menu_panel .m_menu_area .sub_menu {
     background: #f1f2f3;
   }

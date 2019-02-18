@@ -201,7 +201,7 @@ body {
             box-sizing:border-box;
             &:hover {
               color:$primaryColor;
-            }
+            }           
           }
           .use_depth2:after {
             float:right;
@@ -209,6 +209,9 @@ body {
             font-size:19px;
             font-family:fontawesome;
           }
+          &:hover > a {
+            color:$primaryColor;
+          } 
         }
       }
       .sub_menu {
